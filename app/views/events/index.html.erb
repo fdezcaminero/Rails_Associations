@@ -10,11 +10,14 @@
       </tr>
     </thead>
     <tbody>
-      <% @user.events.each do |event| %>
+      <% @events.each do |event| %>
         <tr>
           <td><%= event.name %></td>
           <td><%= event.location %></td>
           <td><%= event.day %></td>
+        </tr>
+        <tr>
+            <td colspan="3"><%= event.description %></td>
         </tr>
       <% end %>
     </tbody>

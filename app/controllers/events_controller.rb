@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     end
 
     def create
-        @event = current_user.events.build(event_params)
+        @event = User.events.build(event_params)
 
         respond_to do |format|
             if @event.save
@@ -18,9 +18,13 @@ class EventsController < ApplicationController
         end 
     end
 
-    def new
-        @event = current_user.events.build
+    def show
     end
+
+    def new
+        @event = User.events.build
+    end
+
 
     private
 
@@ -31,6 +35,6 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params
-        params.require(:event).permit(:name, :location, :day, :user_id)
+        params.require(:event).permit(:name, :location, :day, :user_id, :description)
     end 
 end

@@ -1,28 +1,28 @@
 <div class="container">
-  <h1 class="primary-font-color post-heading mt-5">All events</h1>
+<h1 class="primary-font-color post-heading mt-5">All events</h1>
 
-  <table>
-    <thead>
+<table>
+  <thead>
+    <tr>
+      <th>Event Name</th>
+      <th>Location</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
       <tr>
-        <th>Event Name</th>
-        <th>Location</th>
-        <th>Date</th>
+        <td><%= event.name %></td>
+        <td><%= event.location %></td>
+        <td><%= event.day %></td>
       </tr>
-    </thead>
-    <tbody>
-      <% @events.each do |event| %>
-        <tr>
-          <td><%= event.name %></td>
-          <td><%= event.location %></td>
-          <td><%= event.day %></td>
-        </tr>
-        <tr>
-            <td colspan="3"><%= event.description %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+      <tr>
+          <td colspan="3"><%= event.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-  <br>
+<br>
 
 </div>

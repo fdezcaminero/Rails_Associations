@@ -1,18 +1,30 @@
 <div class="container mt-5">
-    <form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+  <div class="form-div">
+        <h2 class="primary-font-color">Sign up</h2>
+        <%= form_for @user do |f|%>
+            <ul>
+                <% @user.errors.full_messages.each do |error| %>
+                    <li> <%= error %> </li>
+                <% end %>
+             </ul>
+            <div class="form-group">
+            <%= f.label :username, class: "primary-font-color" %><br />
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+            <%= f.label :email, class: "primary-font-color" %><br />
+            <%= f.email_field :email, autocomplete: "email", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+            <%= f.label :password, class: "primary-font-color" %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+            <%= f.submit "Sign up", class: "btn", id: "signup-button" %>
+            </div>
+        <% end %>
+  </div>
 </div>

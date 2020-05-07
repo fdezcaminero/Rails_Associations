@@ -1,1 +1,23 @@
 @import "bootstrap";
+
+.primary-font-color {
+  color: #d4af37;
+}    
+
+.secondary-font-color {
+  color: white;
+}
+
+.form-div {
+  width: 500px;
+  border: 1px solid #d4af37;
+  border-radius: 2%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}  
+
+#signup-button, #login-button {
+  background: #d4af37;
+  color: white;
+}

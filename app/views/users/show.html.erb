@@ -1,11 +1,6 @@
 <div class="container">
-    <h4>Delegates:</h4>
-    <%= current_user.invites.each do |x| %>
-        <h2> <%= x.name %> </h2>
-        <h3> Host: <%= @event.creator.username %> </h3>
-        <br>  
-        <ul class="list-group">
-            <%= x.attendee_id.username  %>
-        </ul>
+    <h4>My Upcoming events:</h4>
+    <%= current_user.invites.each do |invite| %>
+        <h2> <%= invite.name %> </h2>
     <% end %>
 </div>

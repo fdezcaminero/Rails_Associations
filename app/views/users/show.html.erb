@@ -1,6 +1,8 @@
 <div class="container mt-5">
     <h4>My Upcoming events:</h4>
     <% current_user.invites.each do |invite| %>
-        <h2> <%= Event.find_by(id: invite.attended_event_id).name %> </h2>
+        <ul class="list-group">
+            <li class="list-group-item"><h2> <%= Event.find_by(id: invite.attended_event_id).name %></h2></li>
+        </ul>
     <% end %>
 </div>

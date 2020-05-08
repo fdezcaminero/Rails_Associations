@@ -1,5 +1,13 @@
-
-<h2> <%= @event.creator.username %> </h2>
-
+<div class="container mt-5">
+    <h2> <%= @event.name %> </h2>
+    <h3> Host: <%= @event.creator.username %> </h3>
+    <br>
+    <h4>Delegates</h4>
+    <% @event.attendees.each do |at| %>
+        <ul class="list-group">
+           <li class="list-group-item"><%= at.username %></li>
+        </ul>
+    <% end %>
+</div>
 
 

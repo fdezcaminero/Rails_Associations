@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
@@ -6,9 +7,9 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:session][:username])
     if @user
       session[:user_id] = @user.id
-      redirect_to @user
+      redirect_to events_path
     else
-      flash.now[:error] = 'That username does not exist, please try again'
+      flash.now[:error] = 'Invalid username, please try again'
       render :new
     end
   end

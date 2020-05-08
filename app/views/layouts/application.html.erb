@@ -21,7 +21,12 @@
           <%= link_to 'Sign Up', new_user_path , class: "primary-font-color" %>
         <% end %>
       </div>
-    </nav>  
+    </nav>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger" role="alert">
+          <%= alert %>
+        </div>
+      <% end %>  
     <%= yield %>
   </body>
 </html>

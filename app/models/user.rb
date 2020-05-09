@@ -1,3 +1,4 @@
+require 'date'
 class User < ApplicationRecord
     validates :username, presence: true, uniqueness: true
     validates :email, presence: true, uniqueness: true
@@ -8,10 +9,10 @@ class User < ApplicationRecord
     has_many :attended_events, through: :invites
 
     def upcoming_events
-        attended_events.where(day: >= Date.today)
-      end
+        attended_events.where("day >= date('now')")
+    end
     
     def previous_events
-        attended_events.where(day: < Date.today)
+        attended_events.where("day < date('now')")
     end
 end

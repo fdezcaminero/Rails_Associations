@@ -1,5 +1,5 @@
 <div class="container">
-<h1 class="primary-font-color post-heading mt-5">All events</h1>
+<h1 class="primary-font-color post-heading mt-5">Upcoming events</h1>
 
 <table>
   <thead>
@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @events.each do |event| %>
+    <% @upcoming.each do |event| %>
       <tr>
         <td><%= event.name %></td>
         <td><%= event.location %></td>
@@ -18,6 +18,38 @@
       </tr>
       <tr>
           <td colspan="3"><%= event.description %></td>
+      </tr>
+      <tr>
+        <td colspan="3"><%= link_to 'View Event', event_path(event), class: "primary-font-color" %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1 class="primary-font-color post-heading mt-5">Past events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event Name</th>
+      <th>Location</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @past.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.location %></td>
+        <td><%= event.day %></td>
+      </tr>
+      <tr>
+          <td colspan="3"><%= event.description %></td>
+      </tr>
+      <tr>
+        <td colspan="3"><%= link_to 'View Event', event_path(event), class: "primary-font-color" %>
       </tr>
     <% end %>
   </tbody>

@@ -1,22 +1,22 @@
 <div class="container mt-5">
-        <h2 class="primary-font-color">Create an Event</h2>
+        <h2 class="text-dark">Create an Event</h2>
         <%= form_for @event do |f|%>
             <div class="form-row">
                 <div class="col-md-4 mb-3">
-                    <%= f.label :name, class: "primary-font-color" %>
+                    <%= f.label :name, class: "text-dark" %>
                     <%= f.text_field :name, class: "form-control" %>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <%= f.label :location, class: "primary-font-color" %>
+                    <%= f.label :location, class: "text-dark" %>
                     <%= f.text_field :location, class: "form-control" %>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <%= f.label :day, class: "primary-font-color" %>
+                    <%= f.label :day, class: "text-dark" %>
                     <%= f.date_field :day, class: "form-control" %>
                 </div>
             </div>
             <div class="form-group">
-                <%= f.label :description, class: "primary-font-color" %><br />
+                <%= f.label :description, class: "text-dark" %><br />
                 <%= f.text_area :description, autofocus: true, class: "form-control" %>
             </div>
 

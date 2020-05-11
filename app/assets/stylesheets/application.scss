@@ -24,7 +24,13 @@
 }
 
 .web-bg-theme {
-  background: linear-gradient(rgba(197, 64, 12, 0.8) 30%, rgb(102, 100, 95) 90%), url("https://d2bgjx2gb489de.cloudfront.net/gbb-blogs/wp-content/uploads/2018/06/06125353/Party_XL-870x400.jpg");
-  background-size: 100vw 100vh;
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(223, 148, 10, 0.8) 30%, rgb(126, 93, 9) 90%);
+}
+
+.bg-gold {
+  background: #d4af37;
+}
+
+.no-border {
+  border: none;
 }

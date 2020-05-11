@@ -4,6 +4,8 @@
         <ul class="list-group">
             <li class="list-group-item bg-gold shadow-lg mb-5 rounded"><h2> <%= event.name%></h2>
                 <%= link_to 'View Event', event_path(event) , class: "primary-font-color btn btn-dark"%>
+                <button type="button" class="primary-font-color btn btn-dark" data-toggle="modal" data-target="#new-invite-modal" >Invite</button>
+                <%= render 'invite'%>
             </li>
         </ul>
     <% end %>

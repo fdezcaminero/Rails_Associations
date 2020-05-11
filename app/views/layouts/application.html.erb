@@ -12,10 +12,12 @@
 
   <body class="web-bg-theme">
     <nav class="navbar navbar-light bg-dark text-white font-weight-bold">
-      <%= link_to 'DVNO Events ', events_path , class: "primary-font-color"%>
-      <% if current_user %>
-        <%= link_to 'My Events ', current_user , class: "primary-font-color btn", id: "my_event_btn" %>
-      <% end %>
+      <div>
+        <%= link_to 'DVNO Events ', events_path , class: "primary-font-color"%>
+        <% if current_user %>
+          <%= link_to 'My Events ', current_user , class: "primary-font-color btn", id: "my_event_btn" %>
+        <% end %>
+      </div>
       <div>
         <% if current_user %>
         <%= link_to 'Create Event', new_event_path, class: "btn", id: "create_event_btn" %> 

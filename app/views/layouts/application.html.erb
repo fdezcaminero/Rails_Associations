@@ -5,12 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="web-bg-theme">
-    <nav class="navbar navbar-light bg-dark text-white">
+    <nav class="navbar navbar-light bg-dark text-white font-weight-bold">
       <%= link_to 'DVNO Events ', events_path , class: "primary-font-color"%>
       <% if current_user %>
         <%= link_to 'My Events ', current_user , class: "primary-font-color btn", id: "my_event_btn" %>

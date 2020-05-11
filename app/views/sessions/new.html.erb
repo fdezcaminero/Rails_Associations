@@ -1,7 +1,7 @@
 <div class="container mt-5">
-  <div class="form-div">
+  <div class="form-div bg-dark">
         <h2 class="primary-font-color">Log In</h2>
-        <%= form_with(url: login_path, scope: :session, local: true) do |f|%>
+        <%= form_with(url: login_path, scope: :session, local: true, class: "bg-dark") do |f|%>
             <div class="danger">
                 <%= flash[:error] %>
             </div>

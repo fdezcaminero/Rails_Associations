@@ -1,36 +1,42 @@
 <div class="container">
-  <h1 class="text-black post-heading mt-5">Upcoming events</h1>
+  <div class="center">
+    <h1 class="text-black post-heading mt-5"><i class="fas fa-calendar-check text-success"></i> Upcoming events</h1>
 
-  <div class="row">
-    <% @upcoming.each do |event| %>
-      <div class="card mt-3 mr-3 shadow-lg mb-5 rounded no-border" style="width: 18rem;">
-        <img src="https://i.pinimg.com/736x/5b/0a/37/5b0a37cedb4c36bfcddced3eb6f3f838.jpg" class="card-img-top" alt="img-event">
-        <div class="card-body bg-gold">
-          <h5 class="card-title"><%= event.name %></h5>
-          <p class="card-text"><%= event.location %></p>
-          <h6 class="card-title"><%= event.day %></h6>
-          <%= link_to 'View Event', event_path(event), class: "primary-font-color btn btn-dark" %>
-        </div>
+    <% if @upcoming.count == 0 %>
+      <h4>There are no upcoming events</h4>
+    <% else %>
+      <div class="row">
+        <% @upcoming.each do |event| %>
+          <div class="card mt-3 mr-3 shadow-lg mb-5 rounded no-border" style="width: 18rem;">
+            <img src="https://i.pinimg.com/736x/5b/0a/37/5b0a37cedb4c36bfcddced3eb6f3f838.jpg" class="card-img-top" alt="img-event">
+            <div class="card-body bg-gold">
+              <h5 class="card-title"><%= event.name %></h5>
+              <p class="card-text"><%= event.location %></p>
+              <h6 class="card-title"><%= event.day %></h6>
+              <%= link_to 'View Event', event_path(event), class: "primary-font-color btn btn-dark" %>
+            </div>
+          </div>
+        <% end %>
       </div>
     <% end %>
-  </div> 
-
-  <br>
-
-  <h1 class="text-black post-heading mt-5">Past events</h1>
-
-  <div class="row">
-    <% @past.each do |event| %>
-      <div class="card mt-3 mr-3 shadow-lg mb-5 rounded no-border" style="width: 18rem;">
-        <img src="https://i.pinimg.com/736x/5b/0a/37/5b0a37cedb4c36bfcddced3eb6f3f838.jpg" class="card-img-top" alt="img-event">
-        <div class="card-body bg-gold">
-          <h5 class="card-title"><%= event.name %></h5>
-          <p class="card-text"><%= event.location %></p>
-          <h6 class="card-title"><%= event.day %></h6>
-          <%= link_to 'View Event', event_path(event), class: "primary-font-color btn btn-dark" %>
-        </div>
+    
+    <h1 class="text-black post-heading mt-5"><i class="fas fa-calendar-times text-danger"></i> Past events</h1>
+    <% if @upcoming.count == 0 %>
+      <h4>No past events (yet!)</h4>
+    <% else %>
+      <div class="row">
+        <% @past.each do |event| %>
+          <div class="card mt-3 mr-3 shadow-lg mb-5 rounded no-border" style="width: 18rem;">
+            <img src="https://i.pinimg.com/736x/5b/0a/37/5b0a37cedb4c36bfcddced3eb6f3f838.jpg" class="card-img-top" alt="img-event">
+            <div class="card-body bg-gold">
+              <h5 class="card-title"><%= event.name %></h5>
+              <p class="card-text"><%= event.location %></p>
+              <h6 class="card-title"><%= event.day %></h6>
+              <%= link_to 'View Event', event_path(event), class: "primary-font-color btn btn-dark" %>
+            </div>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
-
 </div>

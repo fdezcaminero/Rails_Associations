@@ -5,14 +5,6 @@ class ApplicationController < ActionController::Base
         @current_user ||= User.find_by(id: session[:user_id])
     end
 
-    def signed_in?
-        !current_user.nil?
-    end
-    
-    def login(user_id)
-        session[:user_id] = user_id
-    end
-
     def authorize_user!
         if current_user.nil?
             flash.now[:alert] = 'Please log in to continue!'

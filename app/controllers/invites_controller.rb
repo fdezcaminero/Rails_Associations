@@ -2,6 +2,7 @@ class InvitesController < ApplicationController
     def create
         @invite = current_user.invites.build(invite_params)
         if @invite.save
+            flash.now[:notice] = 'Invitation Sent Successfully!'
             redirect_to current_user
         else
             flash.now[:error] = 'Error creating invitation'

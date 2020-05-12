@@ -1,16 +1,27 @@
 <div class="container mt-5">
+
+    <h4>My Hosted events:</h4>
+    <% current_user.events.each do |event| %>
+        <ul class="list-group">
+            <li class="list-group-item bg-gold shadow-lg mb-5 rounded"><h2> <%= event.name%></h2>
+                <%= link_to 'View Event', event_path(event) , class: "primary-font-color btn btn-dark"%>
+                <button type="button" class="primary-font-color btn btn-dark" data-toggle="modal" data-target="#new-invite-modal" >Invite</button>
+                <%= render '/invites/invite-form'%>
+            </li>
+        </ul>
+    <% end %>
+
+
     <h4>My Upcoming events:</h4>
     <% @upcoming.each do |event| %>
         <ul class="list-group">
             <li class="list-group-item bg-gold shadow-lg mb-5 rounded"><h2> <%= event.name%></h2>
                 <%= link_to 'View Event', event_path(event) , class: "primary-font-color btn btn-dark"%>
-                <button type="button" class="primary-font-color btn btn-dark" data-toggle="modal" data-target="#new-invite-modal" >Invite</button>
-                <%= render 'invite'%>
             </li>
         </ul>
     <% end %>
 
-    <h4 class="mt-3">My Prevoius events:</h4>
+    <h4 class="mt-3">My Previous events:</h4>
     <% @previous.each do |event| %>
         <ul class="list-group">
             <li class="list-group-item bg-gold shadow-lg mb-5 rounded"><h2> <%= event.name%></h2>

@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
     def authorize_user!
         if current_user.nil?
-            flash.now[:alert] = 'Please log in to continue!'
+            flash.now[:error] = 'Please log in to continue!'
             redirect_to(events_path)
         end
     end

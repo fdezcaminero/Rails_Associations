@@ -23,4 +23,15 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
   end
+
+  describe "Associations" do
+    context "Having many from the different existent models" do
+      it { should have_many(:events) }
+      it { should have_many(:invites)}
+      it { should have_many(:attended_events)}
+    end
+  end
+
 end
+
+

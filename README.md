@@ -1,6 +1,9 @@
 ## Private Events
 
-- Testing one of the key features of RoR: the associations!
+> Testing one of the key features of RoR: the associations!
+> Building an application named Private Events and that behaves similar to Eventbrite. The main goal is to put in practice the main concepts of Associations in rails.
+
+> Full task description [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
 
 
 ## Built With
@@ -24,7 +27,7 @@
 - **bundle**: run $ bundle install , this is to install gems declared in the Gemfile
 - **Database Migration**: run *$ rake db:migrate* in console to run database migrations on your local machine
 - Open the rails server with *$ rails server* command and begin executions
-- Follow path * localhost:3000 * to use app
+- Follow path * localhost:3000 * to enjoy the app
 
 
 ## Authors

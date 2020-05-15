@@ -1,7 +1,7 @@
 ## Private Events
 
 > Testing one of the key features of RoR: the associations!
-> Building an application named Private Events and that behaves similar to Eventbrite. The main goal is to put in practice the main concepts of Associations in rails.
+> Building an application named Private Events that behaves similar to Eventbrite. The main goal is to put in practice the main concepts of Associations in rails.
 
 > Full task description [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
 

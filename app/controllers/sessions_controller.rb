@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     if @user
       session[:user_id] = @user.id
       redirect_to events_path
+      flash.notice = 'Successfully Logged In'
     else
       flash.now[:error] = 'Invalid username, please try again'
       render :new

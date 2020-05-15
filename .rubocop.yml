@@ -37,10 +37,6 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-Style/ExponentialNotation:
-  Enabled: false
-Style/SlicingWithRange:
-  Enabled: false
   
 Layout/HashAlignment:
   EnforcedColonStyle: key
@@ -49,10 +45,6 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
-Layout/EmptyLinesAroundAttributeAccessor:
-  Enabled: false
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: false
 
 Lint/RaiseException:
   Enabled: false

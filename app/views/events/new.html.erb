@@ -1,6 +1,15 @@
 <div class="container mt-5">
         <h2 class="text-dark">Create an Event</h2>
         <%= form_for @event do |f|%>
+            <% if @event.errors.any? %>
+            <div id="error_explanation">
+              <ul>
+              <% @event.errors.full_messages.each do |message| %>
+                <li class="text-danger"><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>        
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <%= f.label :name, class: "text-dark" %>

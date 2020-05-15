@@ -1,3 +1,5 @@
+# rubocop:disable Style/GuardClause
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
@@ -15,3 +17,5 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :authorize_user!
 end
+
+# rubocop:enable Style/GuardClause

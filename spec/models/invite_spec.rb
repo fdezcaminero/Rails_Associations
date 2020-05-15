@@ -1,3 +1,5 @@
+# rubocop:disable Layout/LineLength
+
 require 'rails_helper'
 
 RSpec.describe Invite, type: :model do
@@ -29,3 +31,5 @@ RSpec.describe Invite, type: :model do
     end
   end
 end
+
+# rubocop:enable Layout/LineLength

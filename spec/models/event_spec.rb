@@ -1,3 +1,5 @@
+# rubocop:disable Layout/LineLength
+
 require 'date'
 require 'rails_helper'
 
@@ -41,3 +43,5 @@ RSpec.describe Event, type: :model do
     end
   end
 end
+
+# rubocop:enable Layout/LineLength

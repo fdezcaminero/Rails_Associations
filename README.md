@@ -1,13 +1,31 @@
 ## Private Events
 
-- It's impressive how easy it is to create such a complex project by using Ruby on Rails
+- Testing one of the key features of RoR: the associations!
 
 
 ## Built With
 
-- Ruby on Rails
+- Ruby
+- Rails
+- VSCode
+- Terminal
+- Rubocop
 
 ---
+
+## Getting Started
+
+**The project was designed to test the concept of associations in Ruby on Rails**
+
+- **Terminal(Mac & Linux) or Command Prompt(Windows)**: This is where you will run all commands
+- **Clone**: clone this repository to your local machine
+- **Ruby Enviroment**: if you do not have ruby installed visit this [link](https://www.ruby-lang.org/en/documentation/installation/) to install
+- **Rails**: install rails gem by running command *$ gem install rails* -v 5.2.1
+- **bundle**: run $ bundle install , this is to install gems declared in the Gemfile
+- **Database Migration**: run *$ rake db:migrate* in console to run database migrations on your local machine
+- Open the rails server with *$ rails server* command and begin executions
+- Follow path * localhost:3000 * to use app
+
 
 ## Authors
 

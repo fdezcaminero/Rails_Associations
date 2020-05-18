@@ -1,0 +1,36 @@
+<div class="container mt-5">
+        <h2 class="text-dark">Create an Event</h2>
+        <%= form_for @event do |f|%>
+            <% if @event.errors.any? %>
+            <div id="error_explanation">
+              <ul>
+              <% @event.errors.full_messages.each do |message| %>
+                <li class="text-danger"><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>        
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <%= f.label :name, class: "text-dark" %>
+                    <%= f.text_field :name, autofocus: true, class: "form-control" %>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <%= f.label :location, class: "text-dark" %>
+                    <%= f.text_field :location, class: "form-control" %>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <%= f.label :day, class: "text-dark" %>
+                    <%= f.date_field :day, class: "form-control" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <%= f.label :description, class: "text-dark" %><br />
+                <%= f.text_area :description, class: "form-control" %>
+            </div>
+
+        <div class="form-group">
+            <%= f.submit "Create Event", class: "btn btn-dark" %>
+        </div>
+    <% end %>
+</div>

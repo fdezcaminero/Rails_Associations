@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="form-div bg-dark">
+        <h2 class="primary-font-color bg-dark">Sign up</h2>
+        <%= form_for @user do |f|%>
+            <ul>
+                <% @user.errors.full_messages.each do |error| %>
+                    <li> <%= error %> </li>
+                <% end %>
+             </ul>
+            <div class="form-group">
+            <%= f.label :username, class: "primary-font-color" %><br />
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+            <%= f.label :email, class: "primary-font-color" %><br />
+            <%= f.email_field :email, autocomplete: "email", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+            <%= f.label :password, class: "primary-font-color" %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+            <%= f.submit "Sign up", class: "btn", id: "signup-button" %>
+            </div>
+        <% end %>
+  </div>
+</div>

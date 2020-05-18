@@ -1,0 +1,47 @@
+@import "bootstrap";
+* { font-family: 'Ubuntu', sans-serif; }
+
+.primary-font-color {
+  color: #d4af37;
+}    
+
+.secondary-font-color {
+  color: white;
+}
+
+.form-div {
+  width: 500px;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}  
+
+#signup-button, #login-button, #create-event-button, #create_event_btn, #my_event_btn {
+  background: #d4af37;
+  color: white;
+}
+
+.web-bg-theme {
+  background: #d4af37;
+}
+
+.bg-gold {
+  background: #d4af37;
+}
+
+.no-border {
+  border: none;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 90%;
+}
+
+.align-left {
+  text-align: left
+}
